@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--<DTD（Document Type Definition）是文档类型定义>
+约定文档格式，规定元素，元素属性，元素关系，标签，实体等。
+格式为"注册//组织//类型 标签//语言"
+-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://172.20.33.167:3306"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--注册userMapper.xml文件-->
+        <mapper resource="*/userMapper.xml"/>
+    </mappers>
+</configuration>
+
